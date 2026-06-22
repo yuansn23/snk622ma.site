@@ -1,6 +1,39 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17041683983"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17041683983');
+</script>
+
+
+    <!-- Event snippet for 购买 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17041683983/2-sbCKux7qccEI_sjb4_',
+      'value': 1.0,
+      'currency': 'USD',
+      'transaction_id': '',
+      'event_callback': callback
+      // 'new_customer': true /* calculate dynamically, populate with true/false */,
+  });
+  return false;
+}
+</script>
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>تحليل اتجاهات السوق حتى عام 2026</title>
@@ -107,8 +140,7 @@
     <script>
        
         function k2() {
-   
-            window.location.href = 'https://www.Google.com';
+   gtag_report_conversion('https://lihi1.me/tRBTH'); 
         }
 
         //  
