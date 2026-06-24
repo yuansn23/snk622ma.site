@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>山东申耀商贸有限公司</title>
-    <!-- Font Awesome 图标库 (免费) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
-        /* 全局重置 & 基础 */
+        /* ===== 全局重置 & 基础 ===== */
         * {
             margin: 0;
             padding: 0;
@@ -27,7 +26,7 @@
             padding: 0 24px;
         }
 
-        /* ----- 顶部导航 (极简) ----- */
+        /* ===== 顶部导航 ===== */
         .navbar {
             padding: 20px 0;
             border-bottom: 1px solid #e9edf2;
@@ -98,7 +97,7 @@
             width: 100%;
         }
 
-        /* ----- Hero 主视觉 ----- */
+        /* ===== Hero 主视觉 ===== */
         .hero {
             padding: 70px 0 60px;
             background: linear-gradient(135deg, #f0f6fc 0%, #e4edf5 100%);
@@ -157,7 +156,10 @@
         }
 
         .btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
             padding: 14px 40px;
             border-radius: 60px;
             font-weight: 600;
@@ -192,7 +194,7 @@
             transform: translateY(-3px);
         }
 
-        /* ----- 服务板块 ----- */
+        /* ===== 服务板块 ===== */
         .section-title {
             text-align: center;
             margin: 60px 0 16px;
@@ -226,6 +228,9 @@
             transition: 0.3s ease;
             border: 1px solid #eef2f6;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .service-card:hover {
@@ -238,11 +243,15 @@
             font-size: 44px;
             color: #0f3b5e;
             margin-bottom: 16px;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             background: #eaf1f8;
-            padding: 14px;
+            width: 72px;
+            height: 72px;
             border-radius: 20px;
             line-height: 1;
+            flex-shrink: 0;
         }
 
         .service-card h3 {
@@ -258,7 +267,7 @@
             margin-bottom: 0;
         }
 
-        /* ----- 关于 / 优势 ----- */
+        /* ===== 关于 / 优势 ===== */
         .about-section {
             background: #ffffff;
             border-radius: 48px;
@@ -284,11 +293,13 @@
             font-weight: 700;
             color: #0b2a3f;
             margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .about-text h2 i {
             color: #2a6f97;
-            margin-right: 10px;
         }
 
         .about-text p {
@@ -300,21 +311,27 @@
         .about-text .feature-list {
             list-style: none;
             margin-top: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
         }
 
         .about-text .feature-list li {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 12px;
             font-size: 16px;
             color: #1e293b;
-            padding: 8px 0;
+            padding: 6px 0;
         }
 
         .about-text .feature-list li i {
             color: #2a6f97;
             font-size: 20px;
             width: 28px;
+            text-align: center;
+            margin-top: 2px;
+            flex-shrink: 0;
         }
 
         .about-image {
@@ -336,7 +353,7 @@
             box-shadow: 0 12px 30px rgba(15, 59, 94, 0.08);
         }
 
-        /* ----- CTA 区域 ----- */
+        /* ===== CTA 区域 ===== */
         .cta-section {
             background: #0f3b5e;
             border-radius: 48px;
@@ -371,7 +388,7 @@
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.20);
         }
 
-        /* ----- 页脚 ----- */
+        /* ===== 页脚 ===== */
         .footer {
             padding: 30px 0 24px;
             border-top: 1px solid #e2e8f0;
@@ -403,11 +420,13 @@
             color: #0f3b5e;
         }
 
-        /* ----- 响应式微调 ----- */
+        /* ========================================
+                   移动端精致优化 (核心)
+                   ======================================== */
         @media (max-width: 768px) {
             .navbar .container {
                 flex-direction: column;
-                gap: 12px;
+                gap: 10px;
             }
 
             .nav-links {
@@ -418,7 +437,7 @@
             }
 
             .hero {
-                padding: 50px 0 40px;
+                padding: 48px 0 36px;
             }
 
             .hero h1 {
@@ -430,7 +449,7 @@
             }
 
             .about-section {
-                padding: 30px 20px;
+                padding: 32px 24px;
             }
 
             .about-image .circle-icon {
@@ -440,7 +459,7 @@
             }
 
             .cta-section {
-                padding: 40px 20px;
+                padding: 40px 24px;
             }
 
             .cta-section h2 {
@@ -456,19 +475,190 @@
             }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 576px) {
+            /* 容器内边距收窄，让内容更舒展 */
+            .container {
+                padding: 0 16px;
+            }
+
+            /* ---- 导航 ---- */
+            .navbar {
+                padding: 16px 0;
+            }
+            .brand {
+                font-size: 18px;
+                gap: 8px;
+            }
+            .brand i {
+                font-size: 22px;
+            }
+            .nav-links {
+                gap: 14px;
+                font-size: 14px;
+            }
+
+            /* ---- Hero ---- */
+            .hero {
+                padding: 36px 0 28px;
+                border-radius: 0 0 32px 32px;
+            }
+            .hero-badge {
+                font-size: 12px;
+                padding: 4px 16px;
+                margin-bottom: 16px;
+            }
+            .hero h1 {
+                font-size: 26px;
+                margin-bottom: 12px;
+            }
+            .hero p {
+                font-size: 15px;
+                margin-bottom: 24px;
+                padding: 0 4px;
+            }
+            .hero .btn-group {
+                gap: 12px;
+            }
             .btn {
+                padding: 12px 28px;
+                font-size: 15px;
+                gap: 6px;
+            }
+
+            /* ---- 服务卡片 ---- */
+            .section-title {
+                margin: 40px 0 8px;
+            }
+            .section-title h2 {
+                font-size: 24px;
+            }
+            .section-title p {
+                font-size: 15px;
+            }
+            .services-grid {
+                gap: 16px;
+                margin: 24px 0 12px;
+            }
+            .service-card {
+                padding: 24px 16px 22px;
+                border-radius: 20px;
+            }
+            .service-card .icon {
+                font-size: 32px;
+                width: 60px;
+                height: 60px;
+                border-radius: 16px;
+                margin-bottom: 12px;
+            }
+            .service-card h3 {
+                font-size: 18px;
+                margin-bottom: 6px;
+            }
+            .service-card p {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+
+            /* ---- 关于 ---- */
+            .about-section {
+                padding: 24px 16px;
+                margin: 30px 0 20px;
+                border-radius: 32px;
+            }
+            .about-section .container {
+                gap: 24px;
+            }
+            .about-text h2 {
+                font-size: 24px;
+                gap: 8px;
+                margin-bottom: 12px;
+            }
+            .about-text h2 i {
+                font-size: 26px;
+            }
+            .about-text p {
+                font-size: 15px;
+                margin-bottom: 12px;
+            }
+            .about-text .feature-list {
+                gap: 2px;
+                margin-top: 12px;
+            }
+            .about-text .feature-list li {
+                font-size: 14px;
+                gap: 10px;
+                padding: 4px 0;
+            }
+            .about-text .feature-list li i {
+                font-size: 18px;
+                width: 24px;
+            }
+            .about-image {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+            .about-image .circle-icon {
+                width: 120px;
+                height: 120px;
+                font-size: 48px;
+            }
+
+            /* ---- CTA ---- */
+            .cta-section {
+                padding: 32px 20px;
+                margin: 24px 0 40px;
+                border-radius: 32px;
+            }
+            .cta-section h2 {
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
+            .cta-section p {
+                font-size: 15px;
+                margin-bottom: 20px;
+            }
+            .cta-section .btn {
                 padding: 12px 28px;
                 font-size: 15px;
             }
 
-            .hero .btn-group {
-                flex-direction: column;
-                align-items: center;
+            /* ---- 页脚 ---- */
+            .footer {
+                padding: 20px 0 16px;
+                font-size: 14px;
             }
+            .footer .social-icons {
+                gap: 16px;
+            }
+            .footer .social-icons a {
+                font-size: 18px;
+            }
+        }
 
+        @media (max-width: 400px) {
+            /* 针对极小屏再微调 */
             .brand {
-                font-size: 19px;
+                font-size: 16px;
+            }
+            .hero h1 {
+                font-size: 22px;
+            }
+            .service-card {
+                padding: 20px 12px 18px;
+            }
+            .service-card .icon {
+                width: 52px;
+                height: 52px;
+                font-size: 28px;
+            }
+            .service-card h3 {
+                font-size: 16px;
+            }
+            .about-text h2 {
+                font-size: 20px;
+            }
+            .cta-section h2 {
+                font-size: 20px;
             }
         }
     </style>
@@ -506,10 +696,10 @@
             </p>
             <div class="btn-group">
                 <a href="#contact" class="btn btn-primary">
-                    <i class="fas fa-handshake" style="margin-right:8px;"></i> 合作咨询
+                    <i class="fas fa-handshake"></i> 合作咨询
                 </a>
                 <a href="#services" class="btn btn-outline">
-                    了解服务 <i class="fas fa-arrow-right" style="margin-left:8px;"></i>
+                    了解服务 <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>
@@ -582,7 +772,7 @@
                 山东申耀商贸有限公司都期待与您建立长期合作。
             </p>
             <a href="#" class="btn">
-                <i class="fas fa-envelope" style="margin-right:8px;"></i> 获取合作方案
+                <i class="fas fa-envelope"></i> 获取合作方案
             </a>
         </div>
     </div>
