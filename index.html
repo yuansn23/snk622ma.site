@@ -1,43 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17041683983"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17041683983');
-</script>
-
-
-    <!-- Event snippet for 购买 conversion page -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17041683983/2-sbCKux7qccEI_sjb4_',
-      'value': 1.0,
-      'currency': 'USD',
-      'transaction_id': '',
-      'event_callback': callback
-      // 'new_customer': true /* calculate dynamically, populate with true/false */,
-  });
-  return false;
-}
-</script>
-    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>تحليل اتجاهات السوق حتى عام 2026</title>
+    <title>山东申耀商贸有限公司</title>
+    <!-- Font Awesome 图标库 (免费) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
-        /* 全局重置 & 居中 */
+        /* 全局重置 & 基础 */
         * {
             margin: 0;
             padding: 0;
@@ -45,169 +15,595 @@ function gtag_report_conversion(url) {
         }
 
         body {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #f5f7fa;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            padding-bottom: 80px; /* 为底部按钮留出空间（手机上） */
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
         }
 
-        .landing {
-            max-width: 800px;
-            width: 90%;
-            padding: 20px;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ----- 顶部导航 (极简) ----- */
+        .navbar {
+            padding: 20px 0;
+            border-bottom: 1px solid #e9edf2;
             background: #ffffff;
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-            transition: transform 0.2s ease;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 22px;
+            font-weight: 700;
+            color: #0f3b5e;
+            letter-spacing: 0.5px;
+        }
+
+        .brand i {
+            color: #2a6f97;
+            font-size: 28px;
+        }
+
+        .brand span {
+            background: linear-gradient(145deg, #0f3b5e, #1a5a7a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #334155;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #2a6f97;
+            transition: width 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: #0f3b5e;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* ----- Hero 主视觉 ----- */
+        .hero {
+            padding: 70px 0 60px;
+            background: linear-gradient(135deg, #f0f6fc 0%, #e4edf5 100%);
+            border-radius: 0 0 48px 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
         }
 
-        .landing:hover {
-            transform: translateY(-2px);
-        }
-
-        .landing img {
-            display: block;
-            width: 100%;
-            height: auto;
-            border-radius: 16px;
-            cursor: pointer;
-            transition: box-shadow 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-            user-select: none;
-            -webkit-user-select: none;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .landing img:hover {
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-            transform: scale(1.01);
-        }
-
-        .landing img:active {
-            transform: scale(0.97);
-        }
-
-        /* 简单的提示文字（可选） */
-        .hint {
-            margin-top: 18px;
+        .hero-badge {
+            display: inline-block;
+            background: #d4e2ed;
+            color: #0f3b5e;
+            padding: 6px 20px;
+            border-radius: 40px;
             font-size: 14px;
-            color: #8c8f9c;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 6vw, 56px);
+            font-weight: 800;
+            color: #0b2a3f;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            max-width: 900px;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(145deg, #1a5a7a, #0f3b5e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #334e68;
+            max-width: 700px;
+            margin-bottom: 32px;
+            font-weight: 400;
+        }
+
+        .hero .btn-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 17px;
+            text-decoration: none;
+            transition: 0.25s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #0f3b5e;
+            color: #fff;
+            box-shadow: 0 8px 20px rgba(15, 59, 94, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: #1a4f72;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(15, 59, 94, 0.30);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #0f3b5e;
+            border: 2px solid #0f3b5e;
+        }
+
+        .btn-outline:hover {
+            background: #0f3b5e;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        /* ----- 服务板块 ----- */
+        .section-title {
+            text-align: center;
+            margin: 60px 0 16px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            font-weight: 700;
+            color: #0b2a3f;
+            letter-spacing: -0.3px;
+        }
+
+        .section-title p {
+            color: #475569;
+            font-size: 18px;
+            margin-top: 8px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0 20px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            padding: 34px 28px 30px;
+            border-radius: 28px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+            transition: 0.3s ease;
+            border: 1px solid #eef2f6;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(15, 59, 94, 0.08);
+            border-color: #cbdce8;
+        }
+
+        .service-card .icon {
+            font-size: 44px;
+            color: #0f3b5e;
+            margin-bottom: 16px;
+            display: inline-block;
+            background: #eaf1f8;
+            padding: 14px;
+            border-radius: 20px;
+            line-height: 1;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0b2a3f;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #475569;
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+
+        /* ----- 关于 / 优势 ----- */
+        .about-section {
+            background: #ffffff;
+            border-radius: 48px;
+            padding: 50px 40px;
+            margin: 50px 0 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            border: 1px solid #edf2f7;
+        }
+
+        .about-section .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-text {
+            flex: 1 1 300px;
+        }
+
+        .about-text h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0b2a3f;
+            margin-bottom: 16px;
+        }
+
+        .about-text h2 i {
+            color: #2a6f97;
+            margin-right: 10px;
+        }
+
+        .about-text p {
+            color: #334e68;
+            font-size: 17px;
+            margin-bottom: 16px;
+        }
+
+        .about-text .feature-list {
+            list-style: none;
+            margin-top: 18px;
+        }
+
+        .about-text .feature-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 16px;
+            color: #1e293b;
+            padding: 8px 0;
+        }
+
+        .about-text .feature-list li i {
+            color: #2a6f97;
+            font-size: 20px;
+            width: 28px;
+        }
+
+        .about-image {
+            flex: 0 0 240px;
+            text-align: center;
+        }
+
+        .about-image .circle-icon {
+            background: linear-gradient(145deg, #dce8f2, #eaf1f8);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            color: #0f3b5e;
+            margin: 0 auto;
+            box-shadow: 0 12px 30px rgba(15, 59, 94, 0.08);
+        }
+
+        /* ----- CTA 区域 ----- */
+        .cta-section {
+            background: #0f3b5e;
+            border-radius: 48px;
+            padding: 50px 30px;
+            margin: 40px 0 60px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .cta-section h2 {
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            opacity: 0.85;
+            max-width: 600px;
+            margin: 0 auto 28px;
+        }
+
+        .cta-section .btn {
+            background: #ffffff;
+            color: #0f3b5e;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-section .btn:hover {
+            background: #f0f6fc;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.20);
+        }
+
+        /* ----- 页脚 ----- */
+        .footer {
+            padding: 30px 0 24px;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+            color: #64748b;
+            font-size: 15px;
+        }
+
+        .footer .brand-small {
+            font-weight: 700;
+            color: #0f3b5e;
             letter-spacing: 0.3px;
         }
 
-        .hint span {
-            display: inline-block;
-            background: #f0f2f5;
-            padding: 4px 14px;
-            border-radius: 20px;
-            font-size: 12px;
-            color: #5a5d6b;
+        .footer .social-icons {
+            margin: 12px 0 8px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
 
-        /* ---------- 新增：底部悬浮按钮（手机优先） ---------- */
-        .floating-btn {
-            position: fixed;
-            bottom: 24px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: calc(100% - 48px);
-            max-width: 400px;
-            padding: 16px 24px;
-            background: linear-gradient(135deg, #1e2b6d, #2b3f9e);
-            color: #fff;
-            font-size: 18px;
-            font-weight: 600;
-            border: none;
-            border-radius: 50px;
-            box-shadow: 0 8px 30px rgba(27, 55, 120, 0.35);
-            cursor: pointer;
-            z-index: 999;
-            letter-spacing: 0.5px;
-            transition: box-shadow 0.3s ease, transform 0.2s ease;
-            text-align: center;
-            /* 呼吸动画：默认启动 */
-            animation: breathe 2.2s ease-in-out infinite;
+        .footer .social-icons a {
+            color: #64748b;
+            font-size: 20px;
+            transition: color 0.2s;
         }
 
-        /* 呼吸特效：轻微缩放 + 阴影变化 */
-        @keyframes breathe {
-            0% {
-                transform: translateX(-50%) scale(1);
-                box-shadow: 0 8px 30px rgba(27, 55, 120, 0.35);
+        .footer .social-icons a:hover {
+            color: #0f3b5e;
+        }
+
+        /* ----- 响应式微调 ----- */
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-direction: column;
+                gap: 12px;
             }
-            50% {
-                transform: translateX(-50%) scale(1.04);
-                box-shadow: 0 12px 40px rgba(27, 55, 120, 0.55);
+
+            .nav-links {
+                gap: 18px;
+                font-size: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
-            100% {
-                transform: translateX(-50%) scale(1);
-                box-shadow: 0 8px 30px rgba(27, 55, 120, 0.35);
+
+            .hero {
+                padding: 50px 0 40px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .about-section {
+                padding: 30px 20px;
+            }
+
+            .about-image .circle-icon {
+                width: 140px;
+                height: 140px;
+                font-size: 56px;
+            }
+
+            .cta-section {
+                padding: 40px 20px;
+            }
+
+            .cta-section h2 {
+                font-size: 28px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .services-grid {
+                gap: 20px;
             }
         }
 
-        .floating-btn:active {
-            transform: translateX(-50%) scale(0.96);
-            animation: none; /* 点击时暂停呼吸，更自然 */
-        }
-
-        /* 手机上隐藏提示文字（可选）但保留，不影响 */
-        /* 小屏适配 */
         @media (max-width: 480px) {
-            .landing {
-                padding: 12px;
-                border-radius: 16px;
+            .btn {
+                padding: 12px 28px;
+                font-size: 15px;
             }
-            .landing img {
-                border-radius: 12px;
-            }
-            .hint {
-                font-size: 12px;
-                margin-top: 14px;
-            }
-            .floating-btn {
-                width: calc(100% - 32px);
-                bottom: 16px;
-                padding: 14px 20px;
-                font-size: 16px;
-            }
-        }
 
-        /* 大屏幕（桌面）上可以稍微隐藏或保留，但用户仅要求手机，这里保留但限制宽度 */
-        @media (min-width: 769px) {
-            .floating-btn {
-                max-width: 360px;
-                bottom: 40px;
+            .hero .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .brand {
+                font-size: 19px;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="landing">
-        <!-- 图片：img/ab1.jpg，点击后调用 k2() -->
-        <img
-        src="img/ab1.jpg"
-        alt="pic"
-        onclick="k2()"
-        />
+    <!-- ====== 导航栏 ====== -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="brand">
+                <i class="fas fa-building"></i>
+                <span>山东申耀商贸有限公司</span>
+            </div>
+            <div class="nav-links">
+                <a href="#services">服务</a>
+                <a href="#about">关于</a>
+                <a href="#contact">合作</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ====== Hero 区域 ====== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <i class="fas fa-check-circle" style="margin-right:6px;"></i> 诚信 · 专业 · 高效
+            </div>
+            <h1>
+                山东申耀商贸有限公司<br />
+                <span class="highlight">一站式商贸服务伙伴</span>
+            </h1>
+            <p>
+                深耕商贸领域，以卓越的供应链管理与资源整合能力，
+                为您提供高品质的贸易流通与商业服务。
+            </p>
+            <div class="btn-group">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-handshake" style="margin-right:8px;"></i> 合作咨询
+                </a>
+                <a href="#services" class="btn btn-outline">
+                    了解服务 <i class="fas fa-arrow-right" style="margin-left:8px;"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== 服务板块 ====== -->
+    <div class="container" id="services">
+        <div class="section-title">
+            <h2>我们的商贸服务</h2>
+            <p>聚焦流通 · 链接价值 · 赋能增长</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon"><i class="fas fa-truck"></i></div>
+                <h3>供应链管理</h3>
+                <p>整合上下游资源，优化采购、仓储与物流，降低运营成本。</p>
+            </div>
+            <div class="service-card">
+                <div class="icon"><i class="fas fa-hand-holding-usd"></i></div>
+                <h3>贸易代理</h3>
+                <p>提供国内外贸易代理服务，涵盖询盘、跟单、报关等全流程。</p>
+            </div>
+            <div class="service-card">
+                <div class="icon"><i class="fas fa-chart-line"></i></div>
+                <h3>商业咨询</h3>
+                <p>市场分析、品牌策划与数字化营销，助力企业精准决策。</p>
+            </div>
+            <div class="service-card">
+                <div class="icon"><i class="fas fa-boxes"></i></div>
+                <h3>仓储配送</h3>
+                <p>现代化仓储管理与区域配送网络，保障货物高效流转。</p>
+            </div>
+        </div>
     </div>
 
-    <!-- 新增的底部悬浮按钮 -->
-    <button class="floating-btn" onclick="k2()">انضم إلى المجتمع الآن</button>
+    <!-- ====== 关于 / 优势 ====== -->
+    <div class="container" id="about">
+        <div class="about-section">
+            <div class="container">
+                <div class="about-text">
+                    <h2><i class="fas fa-flag"></i> 关于申耀商贸</h2>
+                    <p>
+                        <strong>山东申耀商贸有限公司</strong> 成立于商贸繁荣的齐鲁大地，
+                        致力于为各类企业提供专业、高效的商贸流通解决方案。
+                        我们以客户需求为导向，以诚信共赢为基石，持续构建覆盖
+                        贸易、物流、咨询等领域的综合服务体系。
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> 深耕行业多年，资源网络广泛</li>
+                        <li><i class="fas fa-check-circle"></i> 专业团队，全流程服务支持</li>
+                        <li><i class="fas fa-check-circle"></i> 数字化管理，透明高效</li>
+                        <li><i class="fas fa-check-circle"></i> 以客户为中心，定制化方案</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <div class="circle-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script>
-       
-        function k2() {
-   gtag_report_conversion('https://lihi1.me/tRBTH'); 
-        }
+    <!-- ====== CTA 合作 ====== -->
+    <div class="container" id="contact">
+        <div class="cta-section">
+            <h2>携手申耀，共赢未来</h2>
+            <p>
+                无论您是寻找供应链伙伴、贸易代理还是商业咨询，
+                山东申耀商贸有限公司都期待与您建立长期合作。
+            </p>
+            <a href="#" class="btn">
+                <i class="fas fa-envelope" style="margin-right:8px;"></i> 获取合作方案
+            </a>
+        </div>
+    </div>
 
-        //  
-        console.log('✅ 落地页已加载，点击图片或底部按钮调用 k2() ');
-    </script>
+    <!-- ====== 页脚 ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-icons">
+                <a href="#" aria-label="微信"><i class="fab fa-weixin"></i></a>
+                <a href="#" aria-label="微博"><i class="fab fa-weibo"></i></a>
+                <a href="#" aria-label="邮箱"><i class="fas fa-envelope"></i></a>
+                <a href="#" aria-label="电话"><i class="fas fa-phone-alt"></i></a>
+            </div>
+            <p>
+                &copy; 2026 <span class="brand-small">山东申耀商贸有限公司</span> 
+            </p>
+            <p style="margin-top:4px; font-size:14px; color:#94a3b8;">
+                诚信经营 · 品质服务 · 合作共赢
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>
