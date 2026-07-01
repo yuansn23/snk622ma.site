@@ -1,530 +1,790 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
+<html lang="zh-CN">
 <head>
- 
-<script>
-function h2() {
-  
-            window.open('https://lihi1.me/kjaCh', '_blank');
-        }
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Fortunalista – منصة تعليم الاستثمار في الأسهم</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'financial-primary': '#1e40af',
-                        'financial-secondary': '#dc2626',
-                        'financial-accent': '#059669',
-                        'financial-gold': '#d97706',
-                        'financial-dark': '#1f2937',
-                        'financial-light': '#f8fafc'
-                    },
-                    animation: {
-                        'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'float-gentle': 'float-gentle 3s ease-in-out infinite',
-                        'gradient-shift': 'gradient-shift 4s ease-in-out infinite',
-                        'scale-bounce': 'scale-bounce 0.6s ease-in-out'
-                    },
-                    keyframes: {
-                        'pulse-glow': {
-                            '0%, 100%': { 
-                                transform: 'scale(1)',
-                                boxShadow: '0 0 0 0 rgba(59, 130, 246, 0.7)'
-                            },
-                            '50%': { 
-                                transform: 'scale(1.05)',
-                                boxShadow: '0 0 0 10px rgba(59, 130, 246, 0)'
-                            }
-                        },
-                        'float-gentle': {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' }
-                        },
-                        'gradient-shift': {
-                            '0%, 100%': { backgroundPosition: '0% 50%' },
-                            '50%': { backgroundPosition: '100% 50%' }
-                        },
-                        'scale-bounce': {
-                            '0%': { transform: 'scale(1)' },
-                            '50%': { transform: 'scale(1.1)' },
-                            '100%': { transform: 'scale(1)' }
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>山东申耀商贸有限公司</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
-        .gradient-text-animated {
-            background: linear-gradient(-45deg, #1e40af, #dc2626, #059669, #d97706);
-            background-size: 400% 400%;
+        /* ===== 全局重置 & 基础 ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== 顶部导航 ===== */
+        .navbar {
+            padding: 20px 0;
+            border-bottom: 1px solid #e9edf2;
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 22px;
+            font-weight: 700;
+            color: #0f3b5e;
+            letter-spacing: 0.5px;
+        }
+
+        .brand i {
+            color: #2a6f97;
+            font-size: 28px;
+        }
+
+        .brand span {
+            background: linear-gradient(145deg, #0f3b5e, #1a5a7a);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: gradient-shift 4s ease-in-out infinite;
-        }
-        
-        .hero-background-overlay {
-            background: linear-gradient(135deg, rgba(30, 64, 175, 0.95) 0%, rgba(220, 38, 38, 0.85) 100%);
-        }
-        
-        .feature-card-enhanced {
-            background: linear-gradient(145deg, #ffffff 0%, #f1f5f9 100%);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .feature-card-enhanced:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
-        }
-        
-        .dark .feature-card-enhanced {
-            background: linear-gradient(145deg, #374151 0%, #1f2937 100%);
-        }
-        
-        .testimonial-card-premium {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            border-left: 4px solid #1e40af;
-        }
-        
-        .dark .testimonial-card-premium {
-            background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
-            border-left-color: #3b82f6;
-        }
-        
-        .cta-button-primary {
-            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
-            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
-            transition: all 0.3s ease;
-        }
-        
-        .cta-button-primary:hover {
-            background: linear-gradient(135deg, #b91c1c 0%, #991b1b 50%, #7f1d1d 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 15px 35px rgba(220, 38, 38, 0.4);
-        }
-        
-        .cta-button-secondary {
-            background: linear-gradient(135deg, #059669 0%, #047857 50%, #065f46 100%);
-            box-shadow: 0 8px 20px rgba(5, 150, 105, 0.3);
-        }
-        
-        .cta-button-secondary:hover {
-            background: linear-gradient(135deg, #047857 0%, #065f46 50%, #064e3b 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 28px rgba(5, 150, 105, 0.4);
-        }
-        
-        .floating-whatsapp-button {
-            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
-            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.4);
-        }
-        
-        .risk-disclosure-section {
-            background: linear-gradient(145deg, #fef2f2 0%, #fee2e2 100%);
-            border: 2px solid #fca5a5;
-        }
-        
-        .dark .risk-disclosure-section {
-            background: linear-gradient(145deg, #7f1d1d 0%, #991b1b 100%);
-            border-color: #dc2626;
         }
 
-        /* ضمان عرض النص في سطر واحد على الهواتف */
-        @media (max-width: 640px) {
-            .floating-whatsapp-button .button-text {
-                font-size: 0.85rem;
-                white-space: nowrap;
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #334155;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #2a6f97;
+            transition: width 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: #0f3b5e;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* ===== Hero 主视觉 ===== */
+        .hero {
+            padding: 70px 0 60px;
+            background: linear-gradient(135deg, #f0f6fc 0%, #e4edf5 100%);
+            border-radius: 0 0 48px 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #d4e2ed;
+            color: #0f3b5e;
+            padding: 6px 20px;
+            border-radius: 40px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 6vw, 56px);
+            font-weight: 800;
+            color: #0b2a3f;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            max-width: 900px;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(145deg, #1a5a7a, #0f3b5e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #334e68;
+            max-width: 700px;
+            margin-bottom: 32px;
+            font-weight: 400;
+        }
+
+        .hero .btn-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 40px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 17px;
+            text-decoration: none;
+            transition: 0.25s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #0f3b5e;
+            color: #fff;
+            box-shadow: 0 8px 20px rgba(15, 59, 94, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: #1a4f72;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(15, 59, 94, 0.30);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #0f3b5e;
+            border: 2px solid #0f3b5e;
+        }
+
+        .btn-outline:hover {
+            background: #0f3b5e;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        /* ===== 服务板块 ===== */
+        .section-title {
+            text-align: center;
+            margin: 60px 0 16px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            font-weight: 700;
+            color: #0b2a3f;
+            letter-spacing: -0.3px;
+        }
+
+        .section-title p {
+            color: #475569;
+            font-size: 18px;
+            margin-top: 8px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0 20px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            padding: 34px 28px 30px;
+            border-radius: 28px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+            transition: 0.3s ease;
+            border: 1px solid #eef2f6;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(15, 59, 94, 0.08);
+            border-color: #cbdce8;
+        }
+
+        .service-card .icon {
+            font-size: 44px;
+            color: #0f3b5e;
+            margin-bottom: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #eaf1f8;
+            width: 72px;
+            height: 72px;
+            border-radius: 20px;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0b2a3f;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #475569;
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+
+        /* ===== 关于 / 优势 ===== */
+        .about-section {
+            background: #ffffff;
+            border-radius: 48px;
+            padding: 50px 40px;
+            margin: 50px 0 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            border: 1px solid #edf2f7;
+        }
+
+        .about-section .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-text {
+            flex: 1 1 300px;
+        }
+
+        .about-text h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0b2a3f;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .about-text h2 i {
+            color: #2a6f97;
+        }
+
+        .about-text p {
+            color: #334e68;
+            font-size: 17px;
+            margin-bottom: 16px;
+        }
+
+        .about-text .feature-list {
+            list-style: none;
+            margin-top: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .about-text .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 16px;
+            color: #1e293b;
+            padding: 6px 0;
+        }
+
+        .about-text .feature-list li i {
+            color: #2a6f97;
+            font-size: 20px;
+            width: 28px;
+            text-align: center;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .about-image {
+            flex: 0 0 240px;
+            text-align: center;
+        }
+
+        .about-image .circle-icon {
+            background: linear-gradient(145deg, #dce8f2, #eaf1f8);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            color: #0f3b5e;
+            margin: 0 auto;
+            box-shadow: 0 12px 30px rgba(15, 59, 94, 0.08);
+        }
+
+        /* ===== CTA 区域 ===== */
+        .cta-section {
+            background: #0f3b5e;
+            border-radius: 48px;
+            padding: 50px 30px;
+            margin: 40px 0 60px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .cta-section h2 {
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            opacity: 0.85;
+            max-width: 600px;
+            margin: 0 auto 28px;
+        }
+
+        .cta-section .btn {
+            background: #ffffff;
+            color: #0f3b5e;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-section .btn:hover {
+            background: #f0f6fc;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.20);
+        }
+
+        /* ===== 页脚 ===== */
+        .footer {
+            padding: 30px 0 24px;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+            color: #64748b;
+            font-size: 15px;
+        }
+
+        .footer .brand-small {
+            font-weight: 700;
+            color: #0f3b5e;
+            letter-spacing: 0.3px;
+        }
+
+        .footer .social-icons {
+            margin: 12px 0 8px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .footer .social-icons a {
+            color: #64748b;
+            font-size: 20px;
+            transition: color 0.2s;
+        }
+
+        .footer .social-icons a:hover {
+            color: #0f3b5e;
+        }
+
+        /* ========================================
+                   移动端精致优化 (核心)
+                   ======================================== */
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-direction: column;
+                gap: 10px;
             }
-            .floating-whatsapp-button {
-                padding-left: 1rem;
-                padding-right: 1rem;
+
+            .nav-links {
+                gap: 18px;
+                font-size: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 48px 0 36px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .about-section {
+                padding: 32px 24px;
+            }
+
+            .about-image .circle-icon {
+                width: 140px;
+                height: 140px;
+                font-size: 56px;
+            }
+
+            .cta-section {
+                padding: 40px 24px;
+            }
+
+            .cta-section h2 {
+                font-size: 28px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .services-grid {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            /* 容器内边距收窄，让内容更舒展 */
+            .container {
+                padding: 0 16px;
+            }
+
+            /* ---- 导航 ---- */
+            .navbar {
+                padding: 16px 0;
+            }
+            .brand {
+                font-size: 18px;
+                gap: 8px;
+            }
+            .brand i {
+                font-size: 22px;
+            }
+            .nav-links {
+                gap: 14px;
+                font-size: 14px;
+            }
+
+            /* ---- Hero ---- */
+            .hero {
+                padding: 36px 0 28px;
+                border-radius: 0 0 32px 32px;
+            }
+            .hero-badge {
+                font-size: 12px;
+                padding: 4px 16px;
+                margin-bottom: 16px;
+            }
+            .hero h1 {
+                font-size: 26px;
+                margin-bottom: 12px;
+            }
+            .hero p {
+                font-size: 15px;
+                margin-bottom: 24px;
+                padding: 0 4px;
+            }
+            .hero .btn-group {
+                gap: 12px;
+            }
+            .btn {
+                padding: 12px 28px;
+                font-size: 15px;
+                gap: 6px;
+            }
+
+            /* ---- 服务卡片 ---- */
+            .section-title {
+                margin: 40px 0 8px;
+            }
+            .section-title h2 {
+                font-size: 24px;
+            }
+            .section-title p {
+                font-size: 15px;
+            }
+            .services-grid {
+                gap: 16px;
+                margin: 24px 0 12px;
+            }
+            .service-card {
+                padding: 24px 16px 22px;
+                border-radius: 20px;
+            }
+            .service-card .icon {
+                font-size: 32px;
+                width: 60px;
+                height: 60px;
+                border-radius: 16px;
+                margin-bottom: 12px;
+            }
+            .service-card h3 {
+                font-size: 18px;
+                margin-bottom: 6px;
+            }
+            .service-card p {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+
+            /* ---- 关于 ---- */
+            .about-section {
+                padding: 24px 16px;
+                margin: 30px 0 20px;
+                border-radius: 32px;
+            }
+            .about-section .container {
+                gap: 24px;
+            }
+            .about-text h2 {
+                font-size: 24px;
+                gap: 8px;
+                margin-bottom: 12px;
+            }
+            .about-text h2 i {
+                font-size: 26px;
+            }
+            .about-text p {
+                font-size: 15px;
+                margin-bottom: 12px;
+            }
+            .about-text .feature-list {
+                gap: 2px;
+                margin-top: 12px;
+            }
+            .about-text .feature-list li {
+                font-size: 14px;
+                gap: 10px;
+                padding: 4px 0;
+            }
+            .about-text .feature-list li i {
+                font-size: 18px;
+                width: 24px;
+            }
+            .about-image {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+            .about-image .circle-icon {
+                width: 120px;
+                height: 120px;
+                font-size: 48px;
+            }
+
+            /* ---- CTA ---- */
+            .cta-section {
+                padding: 32px 20px;
+                margin: 24px 0 40px;
+                border-radius: 32px;
+            }
+            .cta-section h2 {
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
+            .cta-section p {
+                font-size: 15px;
+                margin-bottom: 20px;
+            }
+            .cta-section .btn {
+                padding: 12px 28px;
+                font-size: 15px;
+            }
+
+            /* ---- 页脚 ---- */
+            .footer {
+                padding: 20px 0 16px;
+                font-size: 14px;
+            }
+            .footer .social-icons {
+                gap: 16px;
+            }
+            .footer .social-icons a {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            /* 针对极小屏再微调 */
+            .brand {
+                font-size: 16px;
+            }
+            .hero h1 {
+                font-size: 22px;
+            }
+            .service-card {
+                padding: 20px 12px 18px;
+            }
+            .service-card .icon {
+                width: 52px;
+                height: 52px;
+                font-size: 28px;
+            }
+            .service-card h3 {
+                font-size: 16px;
+            }
+            .about-text h2 {
+                font-size: 20px;
+            }
+            .cta-section h2 {
+                font-size: 20px;
             }
         }
     </style>
 </head>
-<body class="bg-financial-light dark:bg-financial-dark text-gray-900 dark:text-gray-100 font-sans overflow-x-hidden">
-    <!-- Navigation Header -->
-    <nav class="bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg fixed w-full z-40 top-0">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-gradient-to-br from-financial-primary to-financial-secondary rounded-lg flex items-center justify-center">
-                        <span class="text-white font-bold text-lg">ف</span>
-                    </div>
-                    <span class="text-xl font-bold gradient-text-animated">Fortunalista</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#features" class="text-gray-700 dark:text-gray-300 hover:text-financial-primary transition-colors">المميزات</a>
-                    <a href="#testimonials" class="text-gray-700 dark:text-gray-300 hover:text-financial-primary transition-colors">قصص النجاح</a>
-                    <a href="#schedule" class="text-gray-700 dark:text-gray-300 hover:text-financial-primary transition-colors">الجلسات</a>
-                </div>
+<body>
+
+    <!-- ====== 导航栏 ====== -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="brand">
+                <i class="fas fa-building"></i>
+                <span>山东申耀商贸有限公司</span>
+            </div>
+            <div class="nav-links">
+                <a href="#services">服务</a>
+                <a href="#about">关于</a>
+                <a href="#contact">合作</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
-        <div class="absolute inset-0 hero-background-overlay"></div>
-        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        
-        <div class="relative z-10 max-w-6xl mx-auto px-4 text-center">
-            <div class="animate-float-gentle">
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
-                    من خلال توصيات الخبراء اليومية<br>
-                    <span class="text-financial-gold">حقّق نمواً ملموساً</span>
-                </h1>
-                <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
-                    انضم إلى مجتمعنا الحصري واحصل يومياً على 3 توصيات مجانية لأسهم مختارة بعناية.
-                </p>
+    <!-- ====== Hero 区域 ====== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <i class="fas fa-check-circle" style="margin-right:6px;"></i> 诚信 · 专业 · 高效
             </div>
-            
-            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
-                <button onclick="h2()" class="cta-button-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:animate-scale-bounce transition-all duration-300">
-                    انضم إلى المجتمع الآن
-                </button>
-                <button onclick="h2()" class="bg-white/20 text-white border-2 border-white/30 px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/30 transition-all duration-300">
-                    تعرّف على المزيد
-                </button>
-            </div>
-            
-            <div class="grid grid-cols-3 gap-4 sm:gap-8 mt-16">
-                <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/30 shadow-lg">
-                    <div class="text-2xl sm:text-3xl font-bold text-financial-primary mb-1 sm:mb-2">+٨٬٠٠٠</div>
-                    <div class="text-xs sm:text-base text-gray-700 font-medium">مستثمر في المجتمع</div>
-                </div>
-                <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/30 shadow-lg">
-                    <div class="text-2xl sm:text-3xl font-bold text-financial-secondary mb-1 sm:mb-2">+١٥ سنة</div>
-                    <div class="text-xs sm:text-base text-gray-700 font-medium">خبرة تحليلية</div>
-                </div>
-                <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/30 shadow-lg">
-                    <div class="text-2xl sm:text-3xl font-bold text-financial-accent mb-1 sm:mb-2">يومياً</div>
-                    <div class="text-xs sm:text-base text-gray-700 font-medium">توصيات مجانية</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section id="features" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold gradient-text-animated mb-6">لماذا تختار Fortunalista؟</h2>
-                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                    اكتشف مميزات مجتمعنا الاستثماري المتميز.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="feature-card-enhanced rounded-2xl p-8 text-center">
-                    <div class="w-16 h-16 bg-gradient-to-br from-financial-primary to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">طريقة تحليل منظمة</h3>
-                    <p class="text-gray-600 dark:text-gray-400">رؤية السوق تستند إلى مؤشرات فنية وأساسية، مع تحليل دقيق للاتجاهات.</p>
-                </div>
-                
-                <div class="feature-card-enhanced rounded-2xl p-8 text-center">
-                    <div class="w-16 h-16 bg-gradient-to-br from-financial-secondary to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">مجتمع داعم</h3>
-                    <p class="text-gray-600 dark:text-gray-400">انضم إلى آلاف المستثمرين، تبادل المعرفة، وادعم بعضكم البعض.</p>
-                </div>
-                
-                <div class="feature-card-enhanced rounded-2xl p-8 text-center">
-                    <div class="w-16 h-16 bg-gradient-to-br from-financial-accent to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">توصيات يومية</h3>
-                    <p class="text-gray-600 dark:text-gray-400">في كل يوم تداول، ستصلك 3 توصيات مدروسة بعناية لأسهم واعدة.</p>
-                </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <img src="img/1.jpg" alt="فريق Fortunalista" class="mx-auto rounded-2xl shadow-2xl max-w-2xl w-full mb-8">
-                <button onclick="h2()" class="cta-button-secondary text-white px-10 py-4 rounded-full text-lg font-semibold">
-                    انضم إلى مجتمع النجاح
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Community Sharing Section -->
-    <section id="schedule" class="py-20 bg-white dark:bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold gradient-text-animated mb-6">المشاركة اليومية في المجتمع</h2>
-                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                    في كل يوم تداول، نتبادل التحليلات ونجيب عن الأسئلة. هذه المشاركة اليومية هي جوهر مجتمع Fortunalista.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-                <div>
-                    <ul class="space-y-6">
-                        <li class="flex items-start">
-                            <div class="w-8 h-8 bg-financial-accent rounded-full flex items-center justify-center ml-4 mt-1 flex-shrink-0">
-                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">تحليل السوق</h4>
-                                <p class="text-gray-600 dark:text-gray-400">فهم الاتجاهات الحالية وفرص السوق.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="w-8 h-8 bg-financial-secondary rounded-full flex items-center justify-center ml-4 mt-1 flex-shrink-0">
-                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">جلسة أسئلة وأجوبة</h4>
-                                <p class="text-gray-600 dark:text-gray-400">إجابات مخصصة لاستفساراتك الاستثمارية.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="w-8 h-8 bg-financial-gold rounded-full flex items-center justify-center ml-4 mt-1 flex-shrink-0">
-                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">استراتيجيات التداول</h4>
-                                <p class="text-gray-600 dark:text-gray-400">تعرف على متى تشتري، تبيع، أو تحتفظ بأصولك.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="w-8 h-8 bg-financial-primary rounded-full flex items-center justify-center ml-4 mt-1 flex-shrink-0">
-                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">رؤى المجتمع</h4>
-                                <p class="text-gray-600 dark:text-gray-400">تعلم من تجارب الآخرين وأسئلتهم.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="text-center">
-                    <div class="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900 dark:to-emerald-900 rounded-2xl p-8">
-                        <svg class="w-40 h-40 mx-auto text-financial-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Schedule Table -->
-            <div class="bg-gradient-to-r from-financial-primary/5 to-financial-secondary/5 rounded-2xl p-8 mt-8">
-                <h3 class="text-2xl font-bold text-center mb-8">جدول المشاركة المجتمعية</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md text-center">
-                        <div class="text-financial-primary font-bold text-sm">الإثنين – الخميس</div>
-                        <div class="text-lg font-semibold mt-2">تحليل ما قبل السوق</div>
-                        <div class="text-gray-600 dark:text-gray-400 text-sm">توصيات الأسهم اليومية</div>
-                    </div>
-                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md text-center">
-                        <div class="text-financial-secondary font-bold text-sm">الجمعة</div>
-                        <div class="text-lg font-semibold mt-2">ملخص السوق</div>
-                        <div class="text-gray-600 dark:text-gray-400 text-sm">جلسة أسئلة وأجوبة</div>
-                    </div>
-                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md text-center">
-                        <div class="text-financial-accent font-bold text-sm">الأحد</div>
-                        <div class="text-lg font-semibold mt-2">ندوة استراتيجية أسبوعية</div>
-                        <div class="text-gray-600 dark:text-gray-400 text-sm">تحليل معمّق</div>
-                    </div>
-                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md text-center">
-                        <div class="text-financial-gold font-bold text-sm">جلسة للمبتدئين</div>
-                        <div class="text-lg font-semibold mt-2">تدريب أساسي</div>
-                        <div class="text-gray-600 dark:text-gray-400 text-sm">مقدمة في الاستثمار</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA + Risk Disclosure (النسخة الكاملة المطلوبة) -->
-    <section class="py-16 bg-gray-100 dark:bg-gray-800">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold gradient-text-animated mb-6">هل أنت مستعد لإطلاق إمكانياتك الاستثمارية؟</h2>
-            <p class="text-xl text-gray-600 dark:text-gray-400 mb-8">
-                أرسل كلمة "JOIN" إلى رقم واتساب الخاص بنا وانضم فوراً.
+            <h1>
+                山东申耀商贸有限公司<br />
+                <span class="highlight">一站式商贸服务伙伴</span>
+            </h1>
+            <p>
+                深耕商贸领域，以卓越的供应链管理与资源整合能力，
+                为您提供高品质的贸易流通与商业服务。
             </p>
-            <button onclick="h2()" class="cta-button-primary text-white px-10 py-4 rounded-full text-xl font-semibold inline-flex items-center space-x-3">
-                <span>انضم عبر واتساب</span>
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.683"/>
-                </svg>
-            </button>
-
-            <!-- Risk Disclosure الكامل (مطابق للإصدار السابق) -->
-            <div class="risk-disclosure-section rounded-2xl p-8 mt-12 text-right">
-                <div class="flex items-center mb-4">
-                    <svg class="w-8 h-8 text-red-600 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
-                    </svg>
-                    <h3 class="text-xl font-bold text-red-800 dark:text-red-400">⚠️ إفصاح هام عن المخاطر</h3>
-                </div>
-                <div class="space-y-4 text-sm text-red-700 dark:text-red-300">
-                    <p><strong>تنبيه مخاطر الاستثمار:</strong> جميع الاستثمارات تنطوي على مخاطر كامنة. الأداء السابق لا يضمن النتائج المستقبلية. يمكن أن تتقلب أسعار الأسهم بشكل كبير وقد تخسر جزءاً أو كل استثمارك.</p>
-                    
-                    <p><strong>غرض تعليمي:</strong> المحتوى المقدم في هذه المنصة هو لأغراض تعليمية فقط ولا ينبغي اعتباره نصيحة استثمارية شخصية. قم دائماً بإجراء بحثك الخاص واعتبار وضعك المالي قبل اتخاذ قرارات الاستثمار.</p>
-                    
-                    <p><strong>لا توجد ضمانات استثمارية:</strong> نحن لا نضمن أي نتائج أو عوائد استثمارية محددة. يمكن أن تتغير ظروف السوق بسرعة وبشكل غير متوقع.</p>
-                    
-                    <p><strong>استشارة مهنية:</strong> يُنصح بالتشاور مع مستشارين ماليين مؤهلين قبل اتخاذ قرارات استثمارية كبيرة. محتوانا التعليمي لا يغني عن الاستشارة المالية المهنية.</p>
-                    
-                    <p><strong>بيان الامتثال:</strong> تلتزم هذه المنصة بسياسات الإعلانات المالية من Google. نركز على التعليم ولا نقدم خدمات استثمارية مباشرة أو توصيات بشأن أوراق مالية محددة.</p>
-                    
-                    <p><strong>متطلبات العمر:</strong> خدمات التعليم الاستثماري موجهة للبالغين من عمر ٢٥ سنة فما فوق. يجب على المستخدمين الالتزام باللوائح والقوانين المالية المحلية.</p>
-                </div>
+            <div class="btn-group">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-handshake"></i> 合作咨询
+                </a>
+                <a href="#services" class="btn btn-outline">
+                    了解服务 <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 dark:bg-black text-white py-12">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <div class="w-12 h-12 bg-gradient-to-br from-financial-primary to-financial-secondary rounded-lg flex items-center justify-center">
-                            <span class="text-white font-bold text-lg">ف</span>
-                        </div>
-                        <span class="text-2xl font-bold">Fortunalista</span>
-                    </div>
-                    <p class="text-gray-400 mb-6 max-w-md">
-                        مجتمع استثماري يقدم توصيات يومية وتحليلات احترافية لمساعدتك على اتخاذ قرارات مستنيرة.
+    <!-- ====== 服务板块 ====== -->
+    <div class="container" id="services">
+        <div class="section-title">
+            <h2>我们的商贸服务</h2>
+            <p>聚焦流通 · 链接价值 · 赋能增长</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon"><i class="fas fa-truck"></i></div>
+                <h3>供应链管理</h3>
+                <p>整合上下游资源，优化采购、仓储与物流，降低运营成本。</p>
+            </div>
+            <div class="service-card">
+                <div class="icon"><i class="fas fa-hand-holding-usd"></i></div>
+                <h3>贸易代理</h3>
+                <p>提供国内外贸易代理服务，涵盖询盘、跟单、报关等全流程。</p>
+            </div>
+            <div class="service-card">
+                <div class="icon"><i class="fas fa-chart-line"></i></div>
+                <h3>商业咨询</h3>
+                <p>市场分析、品牌策划与数字化营销，助力企业精准决策。</p>
+            </div>
+            <div class="service-card">
+                <div class="icon"><i class="fas fa-boxes"></i></div>
+                <h3>仓储配送</h3>
+                <p>现代化仓储管理与区域配送网络，保障货物高效流转。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== 关于 / 优势 ====== -->
+    <div class="container" id="about">
+        <div class="about-section">
+            <div class="container">
+                <div class="about-text">
+                    <h2><i class="fas fa-flag"></i> 关于申耀商贸</h2>
+                    <p>
+                        <strong>山东申耀商贸有限公司</strong> 成立于商贸繁荣的齐鲁大地，
+                        致力于为各类企业提供专业、高效的商贸流通解决方案。
+                        我们以客户需求为导向，以诚信共赢为基石，持续构建覆盖
+                        贸易、物流、咨询等领域的综合服务体系。
                     </p>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">روابط</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">سياسة الخصوصية</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">شروط الخدمة</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">إفصاح المخاطر</a></li>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> 深耕行业多年，资源网络广泛</li>
+                        <li><i class="fas fa-check-circle"></i> 专业团队，全流程服务支持</li>
+                        <li><i class="fas fa-check-circle"></i> 数字化管理，透明高效</li>
+                        <li><i class="fas fa-check-circle"></i> 以客户为中心，定制化方案</li>
                     </ul>
                 </div>
                 
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">تواصل</h4>
-                    <ul class="space-y-2">
-                        <li class="text-gray-400">الدعم عبر واتساب</li>
-                        <li class="text-gray-400">المجتمع الخاص</li>
-                        <li class="text-gray-400">التوصيات اليومية</li>
-                    </ul>
-                </div>
             </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-500">
-                    © 2024 Fortunalista. جميع الحقوق محفوظة. | محتوى تعليمي – ليس نصيحة استثمارية.
-                </p>
-            </div>
+        </div>
+    </div>
+
+    <!-- ====== CTA 合作 ====== -->
+    <div class="container" id="contact">
+        <div class="cta-section">
+            <h2>携手申耀，共赢未来</h2>
+            <p>
+                无论您是寻找供应链伙伴、贸易代理还是商业咨询，
+                山东申耀商贸有限公司都期待与您建立长期合作。
+            </p>
+            <a href="#" class="btn">
+                <i class="fas fa-envelope"></i> 获取合作方案
+            </a>
+        </div>
+    </div>
+
+    <!-- ====== 页脚 ====== -->
+    <footer class="footer">
+        <div class="container">
+         
+            <p>
+                &copy; 2026 <span class="brand-small">山东申耀商贸有限公司</span> 
+            </p>
+            <p style="margin-top:4px; font-size:14px; color:#94a3b8;">
+                诚信经营 · 品质服务 · 合作共赢
+            </p>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button - سطر واحد، يظهر في منتصف الشاشة على الموبايل -->
-    <div class="fixed bottom-6 left-1/2 -translate-x-1/2 md:left-auto md:right-6 md:translate-x-0 z-50">
-        <button onclick="h2()" class="floating-whatsapp-button text-white px-5 py-3 rounded-full shadow-2xl animate-pulse-glow hover:animate-none transition-all duration-300 flex items-center space-x-2">
-            <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.683"/>
-            </svg>
-            <span class="font-semibold text-sm sm:text-base button-text whitespace-nowrap">انضم عبر واتساب</span>
-        </button>
-    </div>
-
-    <script>
-        // h2 function already defined above
-
-        // Dark mode detection and handling
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.documentElement.classList.add('dark');
-        }
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-            if (event.matches) {
-                document.documentElement.classList.add('dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-            }
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Button click animations
-        document.querySelectorAll('button').forEach(button => {
-            button.addEventListener('click', function() {
-                this.classList.add('animate-scale-bounce');
-                setTimeout(() => {
-                    this.classList.remove('animate-scale-bounce');
-                }, 600);
-            });
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all sections for scroll animations
-        document.querySelectorAll('section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(20px)';
-            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(section);
-        });
-
-        // Floating button enhanced animation
-        const floatingButton = document.querySelector('.floating-whatsapp-button');
-        if (floatingButton) {
-            floatingButton.addEventListener('mouseenter', function() {
-                this.classList.remove('animate-pulse-glow');
-                this.classList.add('animate-float-gentle');
-            });
-            
-            floatingButton.addEventListener('mouseleave', function() {
-                this.classList.remove('animate-float-gentle');
-                this.classList.add('animate-pulse-glow');
-            });
-        }
-    </script>
 </body>
 </html>
