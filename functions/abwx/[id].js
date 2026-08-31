@@ -14,11 +14,11 @@ function landingHtml() {
     '<head>\n' +
     '  <meta charset="UTF-8">\n' +
     '  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
-    '  <title>加载中</title>\n' +
+    '  <title>Loading</title>\n' +
     '  <script src="' + DP_SCRIPT_URL + '"></script>\n' +
     '</head>\n' +
     '<body style="margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:system-ui,-apple-system,sans-serif;background:#fff;color:#333">\n' +
-    '  <p style="font-size:16px;margin:0">加载中…</p>\n' +
+    '  <p style="font-size:16px;margin:0">Loading…</p>\n' +
     '</body>\n' +
     '</html>';
 }
@@ -26,7 +26,7 @@ function landingHtml() {
 export async function onRequest(context) {
   const id = String((context.params && context.params.id) || '').toLowerCase();
   if (!/^[a-z0-9]{8}$/.test(id)) {
-    return new Response('链接无效', { status: 404, headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
+    return new Response('error', { status: 404, headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
   }
   return new Response(landingHtml(), {
     headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' }
