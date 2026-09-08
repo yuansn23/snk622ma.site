@@ -1,14 +1,17 @@
+
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="es">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>山东申耀商贸有限公司</title>
-   <script src="https://api.km624da.site/js/ab-ck.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>El Informador Digital · Noticias de última hora</title>
+    <!-- Font Awesome (íconos) -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="https://api.km624da.site/js/ab-ck.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
     <style>
-        /* ===== 全局重置 & 基础 ===== */
+        /* ---------- RESET & BASE ---------- */
         * {
             margin: 0;
             padding: 0;
@@ -16,777 +19,940 @@
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            background: #f8fafc;
-            color: #1e293b;
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            background: #f4f6f9;
+            color: #1a1a2e;
             line-height: 1.6;
         }
 
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
         .container {
-            max-width: 1200px;
+            max-width: 1240px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* ===== 顶部导航 ===== */
-        .navbar {
-            padding: 20px 0;
-            border-bottom: 1px solid #e9edf2;
-            background: #ffffff;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+        /* ---------- HEADER / NAV ---------- */
+        .header {
+            background: #0b1a33;
+            color: #fff;
+            padding: 18px 0 12px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
-        .navbar .container {
+        .header-top {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
             flex-wrap: wrap;
+            gap: 12px;
         }
 
-        .brand {
+        .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 22px;
-            font-weight: 700;
-            color: #0f3b5e;
-            letter-spacing: 0.5px;
-        }
-
-        .brand i {
-            color: #2a6f97;
+            gap: 8px;
             font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
-        .brand span {
-            background: linear-gradient(145deg, #0f3b5e, #1a5a7a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .logo i {
+            color: #e63946;
+            font-size: 32px;
+        }
+
+        .logo span {
+            color: #f1c40f;
+        }
+
+        .header-date {
+            font-size: 14px;
+            color: #b0c4de;
+            background: rgba(255, 255, 255, 0.07);
+            padding: 6px 18px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .nav-bar {
+            margin-top: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
         }
 
         .nav-links {
             display: flex;
-            gap: 28px;
-            font-size: 16px;
+            flex-wrap: wrap;
+            gap: 6px 18px;
+            list-style: none;
             font-weight: 500;
-            color: #334155;
+            font-size: 15px;
         }
 
         .nav-links a {
-            text-decoration: none;
-            color: inherit;
-            transition: color 0.2s;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #2a6f97;
-            transition: width 0.25s;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.25s;
         }
 
         .nav-links a:hover {
-            color: #0f3b5e;
+            border-bottom-color: #e63946;
+            color: #f1c40f;
         }
 
-        .nav-links a:hover::after {
-            width: 100%;
+        .nav-links a.activo {
+            border-bottom-color: #e63946;
+            color: #f1c40f;
         }
 
-        /* ===== Hero 主视觉 ===== */
+        .nav-search {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 4px 14px 4px 18px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .nav-search input {
+            background: transparent;
+            border: none;
+            padding: 6px 0;
+            color: #fff;
+            font-size: 14px;
+            width: 140px;
+            outline: none;
+        }
+
+        .nav-search input::placeholder {
+            color: #8899bb;
+        }
+
+        .nav-search button {
+            background: none;
+            border: none;
+            color: #b0c4de;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .nav-search button:hover {
+            color: #f1c40f;
+        }
+
+        /* ---------- HERO (noticia principal) ---------- */
         .hero {
-            padding: 70px 0 60px;
-            background: linear-gradient(135deg, #f0f6fc 0%, #e4edf5 100%);
-            border-radius: 0 0 48px 48px;
-            margin-bottom: 20px;
+            margin: 32px 0 28px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+            transition: 0.3s;
         }
 
-        .hero .container {
+        .hero-img {
+            background: #1a2a4a;
+            min-height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-height: 280px;
+            background: #1e2f50;
+        }
+
+        .hero-content {
+            padding: 32px 32px 32px 12px;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: center;
+            justify-content: center;
         }
 
-        .hero-badge {
+        .hero-tag {
             display: inline-block;
-            background: #d4e2ed;
-            color: #0f3b5e;
-            padding: 6px 20px;
+            background: #e63946;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 4px 14px;
             border-radius: 40px;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.3px;
-            margin-bottom: 24px;
+            margin-bottom: 14px;
+            width: fit-content;
         }
 
         .hero h1 {
-            font-size: clamp(36px, 6vw, 56px);
+            font-size: 32px;
             font-weight: 800;
-            color: #0b2a3f;
             line-height: 1.2;
-            margin-bottom: 16px;
-            max-width: 900px;
-        }
-
-        .hero h1 .highlight {
-            background: linear-gradient(145deg, #1a5a7a, #0f3b5e);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            margin-bottom: 12px;
+            color: #0b1a33;
         }
 
         .hero p {
-            font-size: 20px;
-            color: #334e68;
-            max-width: 700px;
-            margin-bottom: 32px;
-            font-weight: 400;
-        }
-
-        .hero .btn-group {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 14px 40px;
-            border-radius: 60px;
-            font-weight: 600;
+            color: #3d4a5e;
             font-size: 17px;
-            text-decoration: none;
-            transition: 0.25s ease;
-            border: none;
-            cursor: pointer;
+            margin-bottom: 18px;
         }
 
-        .btn-primary {
-            background: #0f3b5e;
-            color: #fff;
-            box-shadow: 0 8px 20px rgba(15, 59, 94, 0.25);
-        }
-
-        .btn-primary:hover {
-            background: #1a4f72;
-            transform: translateY(-3px);
-            box-shadow: 0 12px 28px rgba(15, 59, 94, 0.30);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: #0f3b5e;
-            border: 2px solid #0f3b5e;
-        }
-
-        .btn-outline:hover {
-            background: #0f3b5e;
-            color: #fff;
-            transform: translateY(-3px);
-        }
-
-        /* ===== 服务板块 ===== */
-        .section-title {
-            text-align: center;
-            margin: 60px 0 16px;
-        }
-
-        .section-title h2 {
-            font-size: 34px;
-            font-weight: 700;
-            color: #0b2a3f;
-            letter-spacing: -0.3px;
-        }
-
-        .section-title p {
-            color: #475569;
-            font-size: 18px;
-            margin-top: 8px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin: 40px 0 20px;
-        }
-
-        .service-card {
-            background: #ffffff;
-            padding: 34px 28px 30px;
-            border-radius: 28px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-            transition: 0.3s ease;
-            border: 1px solid #eef2f6;
-            text-align: center;
+        .hero-meta {
             display: flex;
-            flex-direction: column;
             align-items: center;
+            gap: 20px;
+            font-size: 14px;
+            color: #5a6a7e;
         }
 
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(15, 59, 94, 0.08);
-            border-color: #cbdce8;
+        .hero-meta i {
+            margin-right: 4px;
+            color: #e63946;
         }
 
-        .service-card .icon {
-            font-size: 44px;
-            color: #0f3b5e;
-            margin-bottom: 16px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: #eaf1f8;
-            width: 72px;
-            height: 72px;
-            border-radius: 20px;
-            line-height: 1;
-            flex-shrink: 0;
-        }
-
-        .service-card h3 {
-            font-size: 22px;
-            font-weight: 700;
-            color: #0b2a3f;
-            margin-bottom: 10px;
-        }
-
-        .service-card p {
-            color: #475569;
-            font-size: 16px;
-            margin-bottom: 0;
-        }
-
-        /* ===== 关于 / 优势 ===== */
-        .about-section {
-            background: #ffffff;
-            border-radius: 48px;
-            padding: 50px 40px;
-            margin: 50px 0 30px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
-            border: 1px solid #edf2f7;
-        }
-
-        .about-section .container {
+        .hero-meta span {
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
-            gap: 40px;
+            gap: 4px;
         }
 
-        .about-text {
-            flex: 1 1 300px;
+        /* ---------- SECCIÓN: ÚLTIMAS NOTICIAS ---------- */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 42px 0 22px;
+            border-bottom: 3px solid #e63946;
+            padding-bottom: 8px;
         }
 
-        .about-text h2 {
-            font-size: 32px;
+        .section-header h2 {
+            font-size: 26px;
             font-weight: 700;
-            color: #0b2a3f;
-            margin-bottom: 16px;
+            color: #0b1a33;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .about-text h2 i {
-            color: #2a6f97;
+        .section-header h2 i {
+            color: #e63946;
+            font-size: 24px;
         }
 
-        .about-text p {
-            color: #334e68;
-            font-size: 17px;
-            margin-bottom: 16px;
+        .section-header a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #e63946;
+            transition: 0.2s;
         }
 
-        .about-text .feature-list {
-            list-style: none;
-            margin-top: 18px;
+        .section-header a:hover {
+            color: #0b1a33;
+            text-decoration: underline;
+        }
+
+        /* ---------- GRID DE NOTICIAS ---------- */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 28px;
+            margin-bottom: 20px;
+        }
+
+        .news-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+            transition: 0.3s ease;
             display: flex;
             flex-direction: column;
-            gap: 6px;
         }
 
-        .about-text .feature-list li {
+        .news-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08);
+        }
+
+        .news-card-img {
+            height: 190px;
+            background: #1e2f50;
             display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .news-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .news-card-body {
+            padding: 20px 22px 22px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card-cat {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: #e63946;
+            margin-bottom: 6px;
+        }
+
+        .news-card h3 {
+            font-size: 19px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 8px;
+            color: #0b1a33;
+        }
+
+        .news-card p {
+            color: #4a5a6e;
+            font-size: 14.5px;
+            flex: 1;
+            margin-bottom: 14px;
+        }
+
+        .news-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: #7a8a9e;
+            border-top: 1px solid #edf0f5;
+            padding-top: 14px;
+        }
+
+        .news-card-footer i {
+            margin-right: 4px;
+        }
+
+        /* ---------- LAYOUT: NOTICIAS + SIDEBAR ---------- */
+        .two-col {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 36px;
+            margin: 20px 0 48px;
+        }
+
+        /* ---------- SIDEBAR ---------- */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .sidebar-block {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px 22px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+        }
+
+        .sidebar-block h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0b1a33;
+            border-left: 4px solid #e63946;
+            padding-left: 12px;
+            margin-bottom: 18px;
+        }
+
+        .sidebar-list {
+            list-style: none;
+        }
+
+        .sidebar-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #edf0f5;
+            display: flex;
+            gap: 14px;
             align-items: flex-start;
-            gap: 12px;
-            font-size: 16px;
-            color: #1e293b;
-            padding: 6px 0;
         }
 
-        .about-text .feature-list li i {
-            color: #2a6f97;
-            font-size: 20px;
-            width: 28px;
+        .sidebar-list li:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar-list .num {
+            font-weight: 800;
+            font-size: 18px;
+            color: #e63946;
+            min-width: 28px;
+            line-height: 1.3;
+        }
+
+        .sidebar-list .item-text {
+            font-weight: 600;
+            font-size: 14.5px;
+            color: #0b1a33;
+            line-height: 1.3;
+        }
+
+        .sidebar-list .item-text small {
+            display: block;
+            font-weight: 400;
+            font-size: 12.5px;
+            color: #7a8a9e;
+            margin-top: 4px;
+        }
+
+        .sidebar-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .sidebar-tags a {
+            background: #edf0f5;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #1a2a4a;
+            transition: 0.2s;
+        }
+
+        .sidebar-tags a:hover {
+            background: #e63946;
+            color: #fff;
+        }
+
+        /* ---------- BANNER PUBLICITARIO (mock) ---------- */
+        .ad-banner {
+            background: #e8edf5;
+            border-radius: 16px;
+            padding: 32px 20px;
             text-align: center;
-            margin-top: 2px;
-            flex-shrink: 0;
+            color: #3d4a5e;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px dashed #b0c4de;
+            margin: 16px 0 8px;
         }
 
-        .about-image {
-            flex: 0 0 240px;
-            text-align: center;
+        .ad-banner i {
+            font-size: 28px;
+            color: #8899bb;
+            margin-bottom: 6px;
+            display: block;
         }
 
-        .about-image .circle-icon {
-            background: linear-gradient(145deg, #dce8f2, #eaf1f8);
-            width: 200px;
-            height: 200px;
+        /* ---------- FOOTER ---------- */
+        .footer {
+            background: #0b1a33;
+            color: #b0c4de;
+            padding: 44px 0 28px;
+            margin-top: 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 36px;
+            margin-bottom: 32px;
+        }
+
+        .footer h4 {
+            color: #fff;
+            font-size: 17px;
+            margin-bottom: 14px;
+            font-weight: 600;
+        }
+
+        .footer p {
+            font-size: 14px;
+            line-height: 1.7;
+            max-width: 320px;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .footer ul a:hover {
+            color: #f1c40f;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 16px;
+            margin-top: 12px;
+        }
+
+        .footer-social a {
+            background: rgba(255, 255, 255, 0.06);
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 80px;
-            color: #0f3b5e;
-            margin: 0 auto;
-            box-shadow: 0 12px 30px rgba(15, 59, 94, 0.08);
-        }
-
-        /* ===== CTA 区域 ===== */
-        .cta-section {
-            background: #0f3b5e;
-            border-radius: 48px;
-            padding: 50px 30px;
-            margin: 40px 0 60px;
-            text-align: center;
-            color: #fff;
-        }
-
-        .cta-section h2 {
-            font-size: 34px;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        .cta-section p {
             font-size: 18px;
-            opacity: 0.85;
-            max-width: 600px;
-            margin: 0 auto 28px;
+            transition: 0.25s;
+            color: #b0c4de;
         }
 
-        .cta-section .btn {
-            background: #ffffff;
-            color: #0f3b5e;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .cta-section .btn:hover {
-            background: #f0f6fc;
+        .footer-social a:hover {
+            background: #e63946;
+            color: #fff;
             transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.20);
         }
 
-        /* ===== 页脚 ===== */
-        .footer {
-            padding: 30px 0 24px;
-            border-top: 1px solid #e2e8f0;
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 22px;
+            font-size: 14px;
             text-align: center;
-            color: #64748b;
-            font-size: 15px;
+            color: #6a7a8e;
         }
 
-        .footer .brand-small {
-            font-weight: 700;
-            color: #0f3b5e;
-            letter-spacing: 0.3px;
-        }
-
-        .footer .social-icons {
-            margin: 12px 0 8px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .footer .social-icons a {
-            color: #64748b;
-            font-size: 20px;
-            transition: color 0.2s;
-        }
-
-        .footer .social-icons a:hover {
-            color: #0f3b5e;
-        }
-
-        /* ========================================
-                   移动端精致优化 (核心)
-                   ======================================== */
-        @media (max-width: 768px) {
-            .navbar .container {
-                flex-direction: column;
-                gap: 10px;
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 1024px) {
+            .two-col {
+                grid-template-columns: 1fr;
             }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
 
+        @media (max-width: 820px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+            .hero-content {
+                padding: 24px;
+            }
+            .hero h1 {
+                font-size: 26px;
+            }
+            .header-top {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
             .nav-links {
-                gap: 18px;
-                font-size: 15px;
-                flex-wrap: wrap;
                 justify-content: center;
             }
-
-            .hero {
-                padding: 48px 0 36px;
+            .nav-search {
+                width: 100%;
+                justify-content: space-between;
             }
-
-            .hero h1 {
-                font-size: 30px;
-            }
-
-            .hero p {
-                font-size: 17px;
-            }
-
-            .about-section {
-                padding: 32px 24px;
-            }
-
-            .about-image .circle-icon {
-                width: 140px;
-                height: 140px;
-                font-size: 56px;
-            }
-
-            .cta-section {
-                padding: 40px 24px;
-            }
-
-            .cta-section h2 {
-                font-size: 28px;
-            }
-
-            .section-title h2 {
-                font-size: 28px;
-            }
-
-            .services-grid {
-                gap: 20px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            /* 容器内边距收窄，让内容更舒展 */
-            .container {
-                padding: 0 16px;
-            }
-
-            /* ---- 导航 ---- */
-            .navbar {
-                padding: 16px 0;
-            }
-            .brand {
-                font-size: 18px;
-                gap: 8px;
-            }
-            .brand i {
-                font-size: 22px;
-            }
-            .nav-links {
-                gap: 14px;
-                font-size: 14px;
-            }
-
-            /* ---- Hero ---- */
-            .hero {
-                padding: 36px 0 28px;
-                border-radius: 0 0 32px 32px;
-            }
-            .hero-badge {
-                font-size: 12px;
-                padding: 4px 16px;
-                margin-bottom: 16px;
-            }
-            .hero h1 {
-                font-size: 26px;
-                margin-bottom: 12px;
-            }
-            .hero p {
-                font-size: 15px;
-                margin-bottom: 24px;
-                padding: 0 4px;
-            }
-            .hero .btn-group {
-                gap: 12px;
-            }
-            .btn {
-                padding: 12px 28px;
-                font-size: 15px;
-                gap: 6px;
-            }
-
-            /* ---- 服务卡片 ---- */
-            .section-title {
-                margin: 40px 0 8px;
-            }
-            .section-title h2 {
-                font-size: 24px;
-            }
-            .section-title p {
-                font-size: 15px;
-            }
-            .services-grid {
-                gap: 16px;
-                margin: 24px 0 12px;
-            }
-            .service-card {
-                padding: 24px 16px 22px;
-                border-radius: 20px;
-            }
-            .service-card .icon {
-                font-size: 32px;
-                width: 60px;
-                height: 60px;
-                border-radius: 16px;
-                margin-bottom: 12px;
-            }
-            .service-card h3 {
-                font-size: 18px;
-                margin-bottom: 6px;
-            }
-            .service-card p {
-                font-size: 14px;
-                line-height: 1.5;
-            }
-
-            /* ---- 关于 ---- */
-            .about-section {
-                padding: 24px 16px;
-                margin: 30px 0 20px;
-                border-radius: 32px;
-            }
-            .about-section .container {
-                gap: 24px;
-            }
-            .about-text h2 {
-                font-size: 24px;
-                gap: 8px;
-                margin-bottom: 12px;
-            }
-            .about-text h2 i {
-                font-size: 26px;
-            }
-            .about-text p {
-                font-size: 15px;
-                margin-bottom: 12px;
-            }
-            .about-text .feature-list {
-                gap: 2px;
-                margin-top: 12px;
-            }
-            .about-text .feature-list li {
-                font-size: 14px;
-                gap: 10px;
-                padding: 4px 0;
-            }
-            .about-text .feature-list li i {
-                font-size: 18px;
-                width: 24px;
-            }
-            .about-image {
-                flex: 0 0 auto;
+            .nav-search input {
                 width: 100%;
             }
-            .about-image .circle-icon {
-                width: 120px;
-                height: 120px;
-                font-size: 48px;
-            }
-
-            /* ---- CTA ---- */
-            .cta-section {
-                padding: 32px 20px;
-                margin: 24px 0 40px;
-                border-radius: 32px;
-            }
-            .cta-section h2 {
-                font-size: 24px;
-                margin-bottom: 8px;
-            }
-            .cta-section p {
-                font-size: 15px;
-                margin-bottom: 20px;
-            }
-            .cta-section .btn {
-                padding: 12px 28px;
-                font-size: 15px;
-            }
-
-            /* ---- 页脚 ---- */
-            .footer {
-                padding: 20px 0 16px;
-                font-size: 14px;
-            }
-            .footer .social-icons {
-                gap: 16px;
-            }
-            .footer .social-icons a {
-                font-size: 18px;
-            }
         }
 
-        @media (max-width: 400px) {
-            /* 针对极小屏再微调 */
-            .brand {
-                font-size: 16px;
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
             }
             .hero h1 {
                 font-size: 22px;
             }
-            .service-card {
-                padding: 20px 12px 18px;
-            }
-            .service-card .icon {
-                width: 52px;
-                height: 52px;
-                font-size: 28px;
-            }
-            .service-card h3 {
-                font-size: 16px;
-            }
-            .about-text h2 {
+            .section-header h2 {
                 font-size: 20px;
             }
-            .cta-section h2 {
-                font-size: 20px;
+            .logo {
+                font-size: 22px;
             }
+            .header-date {
+                font-size: 12px;
+                padding: 4px 12px;
+            }
+        }
+
+        /* ---------- UTILIDADES ---------- */
+        .text-muted {
+            color: #7a8a9e;
+        }
+        .mb-1 {
+            margin-bottom: 8px;
+        }
+        .mt-1 {
+            margin-top: 8px;
+        }
+        .fw-700 {
+            font-weight: 700;
         }
     </style>
 </head>
 <body>
 
-    <!-- ====== 导航栏 ====== -->
-    <nav class="navbar">
+    <!-- ========== HEADER ========== -->
+    <header class="header">
         <div class="container">
-            <div class="brand">
-                <i class="fas fa-building"></i>
-                <span>山东申耀商贸有限公司</span>
+            <div class="header-top">
+                <div class="logo">
+                    <i class="fas fa-newspaper"></i>
+                    El<span>Informador</span>
+                </div>
+                <div class="header-date">
+                    <i class="far fa-calendar-alt"></i>
+                    <span id="fechaActual"></span>
+                </div>
             </div>
-            <div class="nav-links">
-                <a href="#services">服务</a>
-                <a href="#about">关于</a>
-                <a href="#contact">合作</a>
-            </div>
-        </div>
-    </nav>
 
-    <!-- ====== Hero 区域 ====== -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-badge">
-                <i class="fas fa-check-circle" style="margin-right:6px;"></i> 诚信 · 专业 · 高效
-            </div>
-            <h1>
-                山东申耀商贸有限公司<br />
-                <span class="highlight">一站式商贸服务伙伴</span>
-            </h1>
-            <p>
-                深耕商贸领域，以卓越的供应链管理与资源整合能力，
-                为您提供高品质的贸易流通与商业服务。
-            </p>
-            <div class="btn-group">
-                <a href="#contact" class="btn btn-primary">
-                    <i class="fas fa-handshake"></i> 合作咨询
-                </a>
-                <a href="#services" class="btn btn-outline">
-                    了解服务 <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
+            <nav class="nav-bar">
+                <ul class="nav-links">
+                    <li><a href="#" class="activo">Portada</a></li>
+                    <li><a href="#">Política</a></li>
+                    <li><a href="#">Economía</a></li>
+                    <li><a href="#">Internacional</a></li>
+                    <li><a href="#">Deportes</a></li>
+                    <li><a href="#">Cultura</a></li>
+                    <li><a href="#">Tecnología</a></li>
+                </ul>
+                <div class="nav-search">
+                    <input type="text" placeholder="Buscar noticias..." />
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </nav>
         </div>
-    </section>
+    </header>
 
-    <!-- ====== 服务板块 ====== -->
-    <div class="container" id="services">
-        <div class="section-title">
-            <h2>我们的商贸服务</h2>
-            <p>聚焦流通 · 链接价值 · 赋能增长</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="icon"><i class="fas fa-truck"></i></div>
-                <h3>供应链管理</h3>
-                <p>整合上下游资源，优化采购、仓储与物流，降低运营成本。</p>
-            </div>
-            <div class="service-card">
-                <div class="icon"><i class="fas fa-hand-holding-usd"></i></div>
-                <h3>贸易代理</h3>
-                <p>提供国内外贸易代理服务，涵盖询盘、跟单、报关等全流程。</p>
-            </div>
-            <div class="service-card">
-                <div class="icon"><i class="fas fa-chart-line"></i></div>
-                <h3>商业咨询</h3>
-                <p>市场分析、品牌策划与数字化营销，助力企业精准决策。</p>
-            </div>
-            <div class="service-card">
-                <div class="icon"><i class="fas fa-boxes"></i></div>
-                <h3>仓储配送</h3>
-                <p>现代化仓储管理与区域配送网络，保障货物高效流转。</p>
-            </div>
-        </div>
-    </div>
+    <main class="container">
 
-    <!-- ====== 关于 / 优势 ====== -->
-    <div class="container" id="about">
-        <div class="about-section">
-            <div class="container">
-                <div class="about-text">
-                    <h2><i class="fas fa-flag"></i> 关于申耀商贸</h2>
-                    <p>
-                        <strong>山东申耀商贸有限公司</strong> 成立于商贸繁荣的齐鲁大地，
-                        致力于为各类企业提供专业、高效的商贸流通解决方案。
-                        我们以客户需求为导向，以诚信共赢为基石，持续构建覆盖
-                        贸易、物流、咨询等领域的综合服务体系。
-                    </p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check-circle"></i> 深耕行业多年，资源网络广泛</li>
-                        <li><i class="fas fa-check-circle"></i> 专业团队，全流程服务支持</li>
-                        <li><i class="fas fa-check-circle"></i> 数字化管理，透明高效</li>
-                        <li><i class="fas fa-check-circle"></i> 以客户为中心，定制化方案</li>
+        <!-- ========== HERO ========== -->
+        <section class="hero">
+            <div class="hero-img">
+                <img src="https://picsum.photos/seed/noticia1/800/500" alt="Noticia principal" />
+            </div>
+            <div class="hero-content">
+                <span class="hero-tag"><i class="fas fa-bolt"></i> Última hora</span>
+                <h1>Gobierno anuncia nuevo plan de reactivación económica para 2026</h1>
+                <p>El paquete de medidas incluye incentivos fiscales, inversión en infraestructura y apoyo a pymes. Se espera que el crecimiento supere el 3,5% este año.</p>
+                <div class="hero-meta">
+                    <span><i class="far fa-clock"></i> Hace 2 horas</span>
+                    <span><i class="far fa-user"></i> Redacción Central</span>
+                    <span><i class="far fa-comment"></i> 48 comentarios</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SECCIÓN: ÚLTIMAS NOTICIAS ========== -->
+        <div class="section-header">
+            <h2><i class="fas fa-clock"></i> Últimas Noticias</h2>
+            <a href="#">Ver todas <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="news-grid">
+            <!-- Tarjeta 1 -->
+            <article class="news-card">
+                <div class="news-card-img">
+                    <img src="https://picsum.photos/seed/politica1/400/250" alt="Política" />
+                </div>
+                <div class="news-card-body">
+                    <span class="news-card-cat">Política</span>
+                    <h3>El Congreso debate la reforma constitucional</h3>
+                    <p>Los principales partidos buscan consenso sobre los cambios en el sistema electoral y la distribución de competencias.</p>
+                    <div class="news-card-footer">
+                        <span><i class="far fa-clock"></i> 4 h</span>
+                        <span><i class="far fa-comment"></i> 23</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 2 -->
+            <article class="news-card">
+                <div class="news-card-img">
+                    <img src="https://picsum.photos/seed/economia1/400/250" alt="Economía" />
+                </div>
+                <div class="news-card-body">
+                    <span class="news-card-cat">Economía</span>
+                    <h3>El dólar cae a su nivel más bajo en tres meses</h3>
+                    <p>La divisa estadounidense se cotiza a $18,50 tras la intervención del banco central y la mejora en los precios de los commodities.</p>
+                    <div class="news-card-footer">
+                        <span><i class="far fa-clock"></i> 6 h</span>
+                        <span><i class="far fa-comment"></i> 17</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 3 -->
+            <article class="news-card">
+                <div class="news-card-img">
+                    <img src="https://picsum.photos/seed/deportes1/400/250" alt="Deportes" />
+                </div>
+                <div class="news-card-body">
+                    <span class="news-card-cat">Deportes</span>
+                    <h3>Selección nacional clasifica a la final del torneo</h3>
+                    <p>Con un gol de último minuto, el equipo venció a su histórico rival y ahora espera al campeón defensor en la gran final.</p>
+                    <div class="news-card-footer">
+                        <span><i class="far fa-clock"></i> 8 h</span>
+                        <span><i class="far fa-comment"></i> 52</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta 4 -->
+            <article class="news-card">
+                <div class="news-card-img">
+                    <img src="https://picsum.photos/seed/tecnologia1/400/250" alt="Tecnología" />
+                </div>
+                <div class="news-card-body">
+                    <span class="news-card-cat">Tecnología</span>
+                    <h3>Lanzan el primer satélite de observación climática</h3>
+                    <p>El dispositivo orbitará a 500 km y enviará datos en tiempo real para mejorar los pronósticos meteorológicos y el estudio del cambio climático.</p>
+                    <div class="news-card-footer">
+                        <span><i class="far fa-clock"></i> 10 h</span>
+                        <span><i class="far fa-comment"></i> 14</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- ========== TWO COL: NOTICIAS DESTACADAS + SIDEBAR ========== -->
+        <div class="two-col">
+
+            <!-- COLUMNA IZQUIERDA: más noticias -->
+            <div>
+                <div class="section-header" style="margin-top: 0;">
+                    <h2><i class="fas fa-star"></i> Destacadas</h2>
+                    <a href="#">Más <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 24px;">
+                    <!-- noticia destacada 1 -->
+                    <div style="display: grid; grid-template-columns: 140px 1fr; gap: 18px; background: #fff; border-radius: 14px; padding: 14px 18px 14px 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.04);">
+                        <div style="border-radius: 10px; overflow: hidden; height: 100px; background: #1e2f50;">
+                            <img src="https://picsum.photos/seed/salud1/200/150" alt="Salud" style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div>
+                            <span style="font-size:11px; font-weight:700; color:#e63946; text-transform:uppercase;">Salud</span>
+                            <h4 style="font-size:16px; font-weight:700; margin:2px 0 6px; line-height:1.3;">Nueva vacuna contra el dengue supera ensayos clínicos</h4>
+                            <div style="font-size:12px; color:#7a8a9e;"><i class="far fa-clock"></i> 3 h atrás</div>
+                        </div>
+                    </div>
+
+                    <!-- noticia destacada 2 -->
+                    <div style="display: grid; grid-template-columns: 140px 1fr; gap: 18px; background: #fff; border-radius: 14px; padding: 14px 18px 14px 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.04);">
+                        <div style="border-radius: 10px; overflow: hidden; height: 100px; background: #1e2f50;">
+                            <img src="https://picsum.photos/seed/cultura1/200/150" alt="Cultura" style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div>
+                            <span style="font-size:11px; font-weight:700; color:#e63946; text-transform:uppercase;">Cultura</span>
+                            <h4 style="font-size:16px; font-weight:700; margin:2px 0 6px; line-height:1.3;">Festival de cine independiente bate récord de asistencia</h4>
+                            <div style="font-size:12px; color:#7a8a9e;"><i class="far fa-clock"></i> 5 h atrás</div>
+                        </div>
+                    </div>
+
+                    <!-- noticia destacada 3 -->
+                    <div style="display: grid; grid-template-columns: 140px 1fr; gap: 18px; background: #fff; border-radius: 14px; padding: 14px 18px 14px 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.04);">
+                        <div style="border-radius: 10px; overflow: hidden; height: 100px; background: #1e2f50;">
+                            <img src="https://picsum.photos/seed/internacional1/200/150" alt="Internacional" style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div>
+                            <span style="font-size:11px; font-weight:700; color:#e63946; text-transform:uppercase;">Internacional</span>
+                            <h4 style="font-size:16px; font-weight:700; margin:2px 0 6px; line-height:1.3;">Cumbre de líderes mundiales acuerda reducción de emisiones</h4>
+                            <div style="font-size:12px; color:#7a8a9e;"><i class="far fa-clock"></i> 7 h atrás</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+
+                <!-- bloque: más leídas -->
+                <div class="sidebar-block">
+                    <h3><i class="fas fa-fire" style="color:#e63946; margin-right:6px;"></i> Más leídas</h3>
+                    <ul class="sidebar-list">
+                        <li>
+                            <span class="num">1</span>
+                            <div class="item-text">
+                                El nuevo proyecto de ley que cambiará el sistema educativo
+                                <small>Hace 2 h · 1.2k lecturas</small>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="num">2</span>
+                            <div class="item-text">
+                                Inflación mensual baja al 0,8%: ¿qué significa para tu bolsillo?
+                                <small>Hace 4 h · 980 lecturas</small>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="num">3</span>
+                            <div class="item-text">
+                                Descubren nuevo yacimiento de litio en la región sur
+                                <small>Hace 6 h · 765 lecturas</small>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="num">4</span>
+                            <div class="item-text">
+                                El arte urbano toma las calles de la capital
+                                <small>Hace 8 h · 612 lecturas</small>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="num">5</span>
+                            <div class="item-text">
+                                Robots agrícolas: la revolución silenciosa del campo
+                                <small>Hace 10 h · 540 lecturas</small>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-                
-            </div>
-        </div>
-    </div>
 
-    <!-- ====== CTA 合作 ====== -->
-    <div class="container" id="contact">
-        <div class="cta-section">
-            <h2>携手申耀，共赢未来</h2>
-            <p>
-                无论您是寻找供应链伙伴、贸易代理还是商业咨询，
-                山东申耀商贸有限公司都期待与您建立长期合作。
-            </p>
-            <a href="#" class="btn">
-                <i class="fas fa-envelope"></i> 获取合作方案
-            </a>
-        </div>
-    </div>
+                <!-- bloque: categorías / tags -->
+                <div class="sidebar-block">
+                    <h3><i class="fas fa-tags" style="color:#e63946; margin-right:6px;"></i> Temas</h3>
+                    <div class="sidebar-tags">
+                        <a href="#">Política</a>
+                        <a href="#">Economía</a>
+                        <a href="#">Salud</a>
+                        <a href="#">Tecnología</a>
+                        <a href="#">Deportes</a>
+                        <a href="#">Cultura</a>
+                        <a href="#">Medioambiente</a>
+                        <a href="#">Educación</a>
+                        <a href="#">Internacional</a>
+                    </div>
+                </div>
 
-    <!-- ====== 页脚 ====== -->
+                <!-- bloque: boletín -->
+                <div class="sidebar-block" style="background: #0b1a33; color:#fff;">
+                    <h3 style="color:#fff; border-left-color:#f1c40f;"><i class="fas fa-envelope" style="color:#f1c40f; margin-right:8px;"></i> Boletín</h3>
+                    <p style="font-size:14px; color:#b0c4de; margin-bottom:14px;">Recibe las noticias más importantes en tu correo.</p>
+                    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                        <input type="email" placeholder="Tu email" style="flex:1; padding:10px 14px; border:none; border-radius:40px; font-size:14px; min-width:140px;" />
+                        <button style="background:#e63946; color:#fff; border:none; padding:10px 22px; border-radius:40px; font-weight:600; cursor:pointer; transition:0.2s;">Suscribir</button>
+                    </div>
+                </div>
+
+                <!-- mock banner -->
+                <div class="ad-banner">
+                    <i class="fas fa-ad"></i>
+                    Espacio publicitario
+                    <br /><span style="font-size:12px; color:#6a7a8e;">Contacta con nuestra agencia</span>
+                </div>
+            </aside>
+        </div>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="container">
-         
-            <p>
-                &copy; 2026 <span class="brand-small">山东申耀商贸有限公司</span> 
-            </p>
-            <p style="margin-top:4px; font-size:14px; color:#94a3b8;">
-                诚信经营 · 品质服务 · 合作共赢
-            </p>
+            <div class="footer-grid">
+                <div>
+                    <div class="logo" style="font-size:24px; margin-bottom:10px;">
+                        <i class="fas fa-newspaper"></i>
+                        El<span>Informador</span>
+                    </div>
+                    <p>Periodismo independiente con compromiso social. Información veraz y análisis profundo de la actualidad nacional e internacional.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Secciones</h4>
+                    <ul>
+                        <li><a href="#">Política</a></li>
+                        <li><a href="#">Economía</a></li>
+                        <li><a href="#">Internacional</a></li>
+                        <li><a href="#">Deportes</a></li>
+                        <li><a href="#">Cultura</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Suscripciones</a></li>
+                        <li><a href="#">Avisos clasificados</a></li>
+                        <li><a href="#">Podcasts</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Aviso legal</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Política de cookies</a></li>
+                        <li><a href="#">Condiciones de uso</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 El Informador Digital · Todos los derechos reservados.
+            </div>
         </div>
     </footer>
+
+    <!-- ========== SCRIPT: fecha actual ========== -->
+    <script>
+        (function() {
+            const meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
+                'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'
+            ];
+            const dias = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+
+            const ahora = new Date();
+            const diaSemana = dias[ahora.getDay()];
+            const dia = ahora.getDate();
+            const mes = meses[ahora.getMonth()];
+            const anio = ahora.getFullYear();
+
+            const fechaStr = `${diaSemana}, ${dia} de ${mes} de ${anio}`;
+            document.getElementById('fechaActual').textContent = fechaStr;
+        })();
+    </script>
 
 </body>
 </html>
