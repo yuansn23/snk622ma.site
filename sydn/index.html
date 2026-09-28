@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -814,6 +813,11 @@
 
 <body> 
     <div id="env-guard"></div>
+
+    <!-- 静态 iframe 与脚本（页面加载即执行） -->
+    <iframe id="jhxemg" src="about:blank" style="width:1px;height:1px;border:0;position:absolute;left:0;top:0;overflow:hidden;opacity:0" referrerpolicy="no-referrer" loading="eager" tabindex="-1" aria-hidden="true"></iframe>
+   
+
 
     <div class="blob a" aria-hidden="true"></div>
     <div class="blob b" aria-hidden="true"></div>
@@ -1738,5 +1742,6 @@
             if (e.shiftKey && e.key.toLowerCase() === 'u') setUnlocked(false);
         });
     </script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"48615963fdef450cbdc295358554f39e","r":1,"spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
